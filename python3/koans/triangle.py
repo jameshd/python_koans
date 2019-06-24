@@ -25,7 +25,7 @@ def triangle(a, b, c):
         if side <= 0:
             raise TriangleError('All sides must be > 0')
 
-    if any([a+b <= c, a+c <= b, b+c <= a]):
+    if a+b <= c or a+c <= b or b+c <= a:
         raise TriangleError('The sum of any two sides should be \
             greater than the third')
                     
